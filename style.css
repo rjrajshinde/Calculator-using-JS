@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap');
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-weight: normal;
+}
+
+body{
+    padding: 0;
+    border: 0;
+    background: linear-gradient(to right,rgb(0, 255, 255), rgb(3, 0, 192));
+}
+.title{
+    margin-bottom: -3%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    word-spacing: 7px;
+}
+
+.calculator-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh; /*min-height: 600px;*/
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto)repeat(5, 100px) ;
+}
+
+.calculator-grid > button{
+    cursor: pointer;
+    font-size: 2rem;
+    outline: none;    
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.74);
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+.calculator-grid > button:hover{
+    background-color: white ;
+}
+
+.output{
+    grid-column: 1 /-1; /* we wanna go to column no 1 to last column (-1) */
+    background-color: rgba(0, 0, 0, .70);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap:break-word;
+    word-break: break-all;
+    
+}
+
+.output .past-operation{
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, .75);
+}
+
+.output .current-operation{
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255);
+}
